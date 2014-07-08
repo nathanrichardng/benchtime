@@ -1,0 +1,14 @@
+<div>
+	<h1>{{selectedEmployee.name}}</h1>
+	<div class='col-md-4'>
+		<h3>Benches:</h3>
+		<ul>
+			<li ng-repeat='bench in selectedEmployee.benches'>
+				{{bench}}
+			</li>
+		</ul>
+	</div>
+	<div class='clearfix'></div>
+	<div class='bigSpacer'></div>
+	<a href="#/employees">Back</a>
+</div>

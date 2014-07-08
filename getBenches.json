@@ -1,0 +1,17 @@
+[
+	{
+		"name":"LA1",
+		"mon":false,
+		"tues":true,
+		"wed":true,
+		"thurs":true,
+		"fri":true,
+		"sat":true,
+		"sun":false,
+		"startTime":"7:00",
+		"endTime":"15:30",
+		"breakTime":30,
+		"button":"",
+		"employees":[{"name":"test"}]
+	}
+]

@@ -1,0 +1,31 @@
+<div>
+	<div class='col-md-6 col-sm-12 col-xs-12'>
+		<h1>Manage Employees:</h1>
+		<form class='form-horizontal' role='form'>
+			<label for='newEmployee'>Add Employee:</label>
+			<input class='form-control' id='newEmployee' type='text' ng-model='newEmployee.name' placeholder='employee name'>
+			<input class='form-control' type='number' min='0' ng-model='newEmployee.hours' placeholder='hours per week'>
+			<div class='spacer'></div>
+			<label>Benches</label>
+			<div>
+				<button ng-repeat='bench in benches' ng-click='pushBench(bench)' 
+				class='col-md-4 col-sm-12 col-xs-12 btn btn-primary' ng-class='bench.button'>
+					{{bench.name}}
+				</button>
+			</div>
+			<div class='clearfix'></div>
+			<button class='col-md-12 col-sm-12 col-xs-12 btn btn-info text-center' ng-click='addEmployee()'>Add Employee</button>
+		</form>
+	</div>
+	<div class='col-md-4 col-sm-12 col-xs-12 col-md-offset-2'>
+		<h3>My Employees:</h3>
+		<hr>
+		<div class='sideBar'>
+			<div class='col-md-12 employee' ng-click='selectEmployee(employee)' ng-repeat='employee in employees'>
+				<div class='pull-right red' ng-click='deleteEmployee(employee)'>[x]</div>
+				<p>{{employee.name}}</p>
+				<p>{{employee.hours}} hours per week</p>
+			</div>
+		</div>
+	</div>
+</div>

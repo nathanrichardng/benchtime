@@ -1,0 +1,12 @@
+<div>
+	<div ng-repeat='day in days'>
+			{{day.name}}
+		
+		<div ng-repeat='bench in day.benches'>
+			{{bench.name}}
+			<div ng-repeat='employee in bench.employees'>
+				{{employee.name}}
+			</div>
+		</div>
+	</div>
+</div>

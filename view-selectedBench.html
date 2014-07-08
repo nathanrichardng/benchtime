@@ -1,0 +1,23 @@
+<div>
+	<h1>{{selectedBench.name}}</h1>
+	<div class='col-md-4'>
+		<h3>Days:</h3>
+		<ul>
+			<li ng-repeat='day in selectedBench.days'>
+				{{day}}
+			</li>
+		</ul>
+	</div>
+	<div class='col-md-4'>
+		<h3>Employees:</h3>
+		<ul>
+			<!--change to filter through all employees where benches contains bench -->
+			<li ng-repeat='employee in selectedBench.employees'>
+				{{employee.name}}
+			</li>
+		</ul>
+	</div>
+	<div class='clearfix'></div>
+	<div class='bigSpacer'></div>
+	<a href="#/">Back</a>
+</div>

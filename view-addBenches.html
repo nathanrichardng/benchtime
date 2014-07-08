@@ -1,0 +1,80 @@
+<div>
+ 	<div class='col-md-6 col-sm-12 col-xs-12'>
+ 		<h1>Manage Benches:</h1>
+	 	<form class='form-horizontal' role='form'>
+			<label for='newBench'>Add new bench:</label>
+			<input class='form-control' id='newBench' type='text' ng-model='newBench.name' placeholder='bench name'>
+			<div class='spacer'></div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox'> All
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.sunday'> Sunday
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.monday'> Monday
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.tuesday'> Tuesday
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.wednesday'> Wednesday
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.thursday'> Thursday
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.friday'> Friday
+			    </label> 
+			</div>
+			<div class='checkbox col-md-3'>
+			    <label>
+			      	<input type='checkbox' ng-model='newBench.saturday'> Saturday
+			    </label> 
+			</div>
+			<div class='spacer clearfix col-md-12'></div>
+			<div class='col-md-3 time'>
+				<label for='startTime'>Start</label>
+				<br/>
+				<input type='time' id='startTime' placeholder='HH:mm' ng-model='startTime'>
+			</div>
+			<div class='col-md-3 time'>
+				<label for='endTime'>End</label>
+				<br/>
+				<input type='time' id='endTime' placeholder='HH:mm' ng-model='endTime'>
+			</div>
+			<div class='col-md-6 time'>
+				<label for='lunchTime'>Break time (in minutes)</label>
+				<br/>
+				<input type='number' id='breakTime' value='30' ng-model='breakTime'>
+			</div>
+			<div class='spacer clearfix col-md-12'></div>
+			<button ng-click='addBench()' class='pull-right btn btn-info col-md-12 col-sm-12 col-xs-12'>Add</button>
+		</form>
+	</div>
+	<div class='col-md-4 col-md-offset-2 col-sm-12 col-xs-12 pull-left'>
+		<h3>My Benches:</h3>
+		<hr>
+		<div class='sideBar'>
+			<div class='col-md-12 bench' ng-click='selectBench(bench)' ng-repeat='bench in benches'>
+				<div class='pull-right red' ng-click='deleteBench(bench)'>[x]</div>
+				<p>{{bench.name}}</p>
+				<p>{{bench.startTime}}-{{bench.endTime}}</p>
+				<p>{{bench.hours}} hours</p>
+			</div>
+		</div>
+	</div>
+</div>
